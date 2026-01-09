@@ -13,7 +13,7 @@ export default function Register() {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:5000/api/register", {
+      const res = await fetch("http://192.168.134.130:5000/api/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         // Force role as "student"
