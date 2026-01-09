@@ -55,7 +55,7 @@ const [otpMessage, setOtpMessage] = useState("");
     if (!studentId) return;
     setLoading(true);
 
-    fetch(`http://localhost:5000/api/student/profile/${studentId}`)
+    fetch(`http://192.168.134.13:5000/api/student/profile/${studentId}`)
       .then((res) => res.json())
       .then((data) => {
         setStudent(data);
