@@ -39,7 +39,7 @@ export default function StaffDashboard() {
   const fetchMenuItems = async () => {
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:5000/api/staff/menu");
+      const res = await fetch("http://192.168.134.130:5000/api/staff/menu");
       const data = await res.json();
       if (res.ok) {
         setMenuItems(data);
