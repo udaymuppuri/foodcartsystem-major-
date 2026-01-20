@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: foodcart
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: foodcart
+  template:
+    metadata:
+      labels:
+        app: foodcart
+    spec:
+      containers:
+      - name: foodcart
+        image: divya9866/foodcart:latest
+        ports:
+        - containerPort: 5173
+        - containerPort: 5000
