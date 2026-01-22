@@ -1,0 +1,22 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: foodcart
+  namespace: default
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: foodcart
+  template:
+    metadata:
+      labels:
+        app: foodcart
+    spec:
+      containers:
+      - name: foodcart
+        image: udaymuppuri/foodcart:14
+        ports:
+        - containerPort: 5173
+        - containerPort: 5000
